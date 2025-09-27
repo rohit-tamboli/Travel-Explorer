@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <div class="brand">
+            <div class="logo">TE</div>
+            <div>
+                <h1>Travel Explorer</h1>
+                <p class="lead">Search a destination to see photos and live weather</p>
+            </div>
+        </div>
+
+        <div class="searchbar" role="search" style="width:480px;">
+            <input id="searchInput" type="search" aria-label="Search destination" placeholder="e.g. Paris, Tokyo or \"
+                New York, US\"">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="card" id="photoSection" aria-label="Photos">
+            <h2 style="margin:0 0 12px">Destination Photos</h2>
+            <div id="photos" aria-live="polite"></div>
+        </section>
+
+        <aside class="card" id="weatherSection" aria-label="Weather">
+            <h2 style="margin:0 0 12px">Weather</h2>
+            <div id="weather" class="muted">Search a city to see current weather.</div>
+        </aside>
+    </main>
+
+    <footer>
+        Prototype — Powered by Unsplash &amp; OpenWeatherMap
+    </footer>
+
+    <div id="viewerOverlay" aria-hidden="true">
+        <button class="close" id="closeViewer">✕</button>
+        <img id="viewerImg" src="" alt="Large photo preview">
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
